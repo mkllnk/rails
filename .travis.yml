@@ -1,3 +1,4 @@
+dist: trusty
 script: 'ci/travis.rb'
 before_install:
   - gem install bundler -v 1.17.2
@@ -5,11 +6,6 @@ rvm:
   - 2.2
   - 2.3
 env:
-  - "GEM=railties"
-  - "GEM=ap,am,amo,as"
-  - "GEM=ar:mysql"
-  - "GEM=ar:mysql2"
-  - "GEM=ar:sqlite3"
   - "GEM=ar:postgresql"
 bundler_args: --path vendor/bundle --without test
 services:
